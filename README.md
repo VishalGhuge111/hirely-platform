@@ -1,4 +1,4 @@
-# <img src="/icon.png" alt="Hirely logo" width="36" style="vertical-align: middle; margin-right: 10px;" /> Hirely Platform
+# <img src="public/icon.png" alt="Hirely logo" width="36" style="vertical-align: middle; margin-right: 10px;" /> Hirely Platform
 
 A modern, responsive job portal frontend built with React and Vite, enabling users to browse jobs, apply with resume links, verify email via OTP, reset passwords securely, track applications, and manage profiles. Admin users can manage job postings and applications through a dedicated dashboard.
 
@@ -51,7 +51,7 @@ Highlights:
 
 The main landing experience with the platform branding and first impression for visitors.
 
-![Cover View](/cover.png)
+![Cover View](public/cover.png)
 
 ---
 
@@ -59,7 +59,7 @@ The main landing experience with the platform branding and first impression for 
 
 Highlights the available career opportunities and the jobs-first browsing flow.
 
-![Opportunity View](/opportunity.png)
+![Opportunity View](public/opportunity.png)
 
 ---
 
@@ -67,7 +67,7 @@ Highlights the available career opportunities and the jobs-first browsing flow.
 
 Shows the admin workflow for creating and publishing a new job posting.
 
-![Job Creation](/job-creation.png)
+![Job Creation](public/job-creation.png)
 
 ---
 
@@ -75,7 +75,7 @@ Shows the admin workflow for creating and publishing a new job posting.
 
 Displays the central admin control panel for managing platform activity.
 
-![Admin Dashboard](/admin-dashboard.png)
+![Admin Dashboard](public/admin-dashboard.png)
 
 ---
 
@@ -83,7 +83,7 @@ Displays the central admin control panel for managing platform activity.
 
 Summarizes the applicant-side view for tracking submitted job applications.
 
-![User Applications](/user-aplications.png)
+![User Applications](public/user-aplications.png)
 
 ---
 
@@ -91,7 +91,7 @@ Summarizes the applicant-side view for tracking submitted job applications.
 
 Shows how application progress and review status are presented to users.
 
-![Application Status](/aplication%20status.png)
+![Application Status](public/aplication%20status.png)
 
 ---
 
@@ -99,7 +99,7 @@ Shows how application progress and review status are presented to users.
 
 Presents the profile management screen for updating user details and public information.
 
-![User Profile](/user-profile.png)
+![User Profile](public/user-profile.png)
 
 ---
 
