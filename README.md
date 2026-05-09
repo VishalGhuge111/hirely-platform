@@ -1,15 +1,16 @@
-# 💼 Hirely Frontend Client
+# <img src="/icon.png" alt="Hirely logo" width="36" style="vertical-align: middle; margin-right: 10px;" /> Hirely Platform
 
 A modern, responsive job portal frontend built with React and Vite, enabling users to browse jobs, apply with resume links, verify email via OTP, reset passwords securely, track applications, and manage profiles. Admin users can manage job postings and applications through a dedicated dashboard.
 
 **Live URL:** [https://hirelyplatform.vercel.app](https://hirelyplatform.vercel.app)
-**Backend API:** [https://hirely-backend-g7q8.onrender.com](https://hirely-backend-g7q8.onrender.com)
+**Backend Repo:** [https://github.com/VishalGhuge111/hirely-backend](https://github.com/VishalGhuge111/hirely-backend)
 
 ---
 
 ## 📋 Table of Contents
 
 * [Overview](#overview)
+* [Project Screenshots](#project-screenshots)
 * [Tech Stack](#tech-stack)
 * [Features](#features)
 * [Authentication & Security Flow](#authentication--security-flow)
@@ -41,6 +42,64 @@ Highlights:
 * Resume-link based job application system
 * Centralized API layer with JWT handling
 * Deployed on Vercel
+
+---
+
+## 🖼️ Project Screenshots
+
+### Cover View
+
+The main landing experience with the platform branding and first impression for visitors.
+
+![Cover View](/cover.png)
+
+---
+
+### Opportunity View
+
+Highlights the available career opportunities and the jobs-first browsing flow.
+
+![Opportunity View](/opportunity.png)
+
+---
+
+### Job Creation
+
+Shows the admin workflow for creating and publishing a new job posting.
+
+![Job Creation](/job-creation.png)
+
+---
+
+### Admin Dashboard
+
+Displays the central admin control panel for managing platform activity.
+
+![Admin Dashboard](/admin-dashboard.png)
+
+---
+
+### User Applications
+
+Summarizes the applicant-side view for tracking submitted job applications.
+
+![User Applications](/user-aplications.png)
+
+---
+
+### Application Status
+
+Shows how application progress and review status are presented to users.
+
+![Application Status](/aplication%20status.png)
+
+---
+
+### User Profile
+
+Presents the profile management screen for updating user details and public information.
+
+![User Profile](/user-profile.png)
 
 ---
 
