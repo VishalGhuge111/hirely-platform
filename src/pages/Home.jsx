@@ -3,12 +3,21 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import api from "../services/api";
 
+const initialPathname = window.location.pathname;
+let hasShownWakeupNotice = false;
+
 function Home() {
   const [latestJobs, setLatestJobs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showWakeupNotice, setShowWakeupNotice] = useState(false);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
+    if (initialPathname === "/" && !hasShownWakeupNotice) {
+      hasShownWakeupNotice = true;
+      setShowWakeupNotice(true);
+    }
+
     fetchLatestJobs();
   }, []);
 
@@ -31,6 +40,50 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#f0f7ff] font-sans antialiased text-slate-900 overflow-x-hidden">
+      {showWakeupNotice && (
+        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/40 px-4">
+          <div className="relative w-full max-w-lg overflow-hidden bg-white border-[4px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex items-center justify-between bg-[#00c2e0] border-b-[4px] border-black px-5 py-3">
+              <span className="font-black uppercase italic text-black text-sm tracking-widest">
+                Quick Heads Up
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowWakeupNotice(false)}
+                className="w-9 h-9 border-[3px] border-black bg-white font-black text-sm shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
+                aria-label="Close notice"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-4 p-6 sm:p-7">
+              <div className="inline-block bg-[#ffde59] border-[3px] border-black px-3 py-1 font-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                Render Wake-Up Notice
+              </div>
+
+              <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-800">
+                Sometimes the site opens a little slower after being idle.
+                Please wait a moment while the backend wakes up and gets ready.
+              </p>
+
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-slate-400">
+                This can happen when you open the site after some time.
+              </p>
+
+              <div className="flex justify-end pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowWakeupNotice(false)}
+                  className="bg-[#b4f481] border-[3px] border-black px-6 py-3 font-black uppercase text-xs shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
+                >
+                  OK, I’ll Wait
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* HERO SECTION - Full height for Laptops only */}
       <section className="bg-gradient-to-r from-cyan-400 to-cyan-500 border-b-[4px] border-black lg:min-h-[calc(100vh-70px)] flex items-center py-16 lg:py-0">
